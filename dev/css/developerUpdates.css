@@ -1,0 +1,46 @@
+.featureSection {
+    padding: 5px; 
+    border-style: solid;
+    background-color: bisque;
+}
+
+.featureTitle {
+    float:left; 
+    font-weight:bold;
+}
+
+.featureTitle .index {
+    color: #b80000; 
+    margin-top: -4px; 
+    font-size: 2rem; 
+    margin-right: 10px;
+}
+
+.featureTitle .label {
+    font-size: 2rem;
+}
+
+.featureTitle .identityDiv {
+    margin-left: 30px; 
+    font-style: oblique;
+}
+
+.identityDiv .identityText {
+    float:left; 
+    text-transform: lowercase; 
+    color: #585858;
+}
+
+.identityDiv .identityVal {
+    color: mediumvioletred;
+}
+
+.identityDiv .IdImg {
+    height: 15px;
+}
+
+.featureBody {
+    text-align: left; 
+    margin-left: 15px; 
+    margin-top: 5rem;
+}

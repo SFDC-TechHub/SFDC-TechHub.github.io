@@ -1,21 +1,45 @@
 <html>
+   <head>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script>
+         $(function() {
+            $("#includeDevHtml").load("/dev/developerUpdates.html");
+         });
+      </script>
+      <style>
+         .sfdcDevDiv {
+            text-align: center;
+            margin-top: -30px;
+         }
+
+         .main {
+            background-color: black;
+            color: white;
+            height: 50px;
+         }
+
+         .dev {
+            background-color: lightblue;
+            padding-top: 20px;
+         }
+
+         .pageTitle {
+            text-align: center;
+            text-decoration: underline;
+         }
+      </style>
+   </head>
   
-  <head>
-   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-   <script>
-      $(function() {
-         $("#includeHtml").load("/dev/developerUpdates.html");
-      });
-   </script>
-</head>
-  
-<body>
-  <article>
-    <h1>This is Test Html file</h1>
-    
-    <!--SFDC Developer release Updates-->
-   <div id="includeHtml"></div>
- </article>
-</body>
+   <body>
+      <article class="main">
+      <h1 class="pageTitle">SFDC Tech Hub</h1>
+      </article> 
+
+      <!--SFDC Developer release Updates-->
+      <article class="dev">
+         <div id="includeDevHtml" class="sfdcDevDiv"></div>
+      </article>
+      
+   </body>
   
 </html>
