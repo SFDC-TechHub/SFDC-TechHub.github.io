@@ -9,6 +9,11 @@
          function loadSfdcDevPage(){
             document.getElementById("devNav").style.display = "none";
             document.getElementById("dev").style.display = "block";
+         }
+
+        function goBack(){
+            document.getElementById("devNav").style.display = "block";
+            document.getElementById("dev").style.display = "none";
         }
       </script>
       <style>
@@ -78,7 +83,7 @@
   
    <body>
       <article class="main">
-      <h1 class="pageTitle">SFDC Tech Hub</h1>
+         <h1 class="pageTitle">SFDC Tech Hub</h1>
       </article> 
 
       <!--SFDC Developer release Updates Nav -->
@@ -88,6 +93,7 @@
 
       <!--SFDC Developer release Updates Section-->
       <article class="dev" id="dev">
+         <img src="/images/back.png" style="width: 20px; margin: -15 5 5 5;" onclick="goBack();" alt="Go Back" title="Go Back">
          <h3 class="releaseTitle">SFDC Developer Release Updates</h3>
          <div style="padding: 10px;">
             <span class="releaseSec">Release : <span class="releaseName">Spring 23</span></span>
