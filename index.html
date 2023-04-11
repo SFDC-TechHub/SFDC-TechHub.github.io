@@ -5,6 +5,11 @@
          $(function() {
             $("#includeDevHtml").load("/dev/developerUpdates.html");
          });
+
+         function loadSfdcDevPage(){
+            document.getElementById("devNav").style.display = "none";
+            document.getElementById("dev").style.display = "block";
+        }
       </script>
       <style>
          .sfdcDevDiv {
@@ -21,11 +26,52 @@
          .dev {
             background-color: ivory;
             padding-top: 20px;
+            display: none;
          }
 
          .pageTitle {
             text-align: center;
             text-decoration: underline;
+         }
+
+         .devNav {
+            padding: 5px; 
+            background-color: lightgreen;
+            border-radius: 5px;
+            filter: drop-shadow(0 0 2px black);
+            height: 100px;
+            width: 30%;
+            margin: auto;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .releaseSec {
+            float:left; 
+            color: #585858; 
+            font-weight: bold; 
+            font-size: small; 
+            font-style: oblique;
+        }
+
+        .releaseName {
+            font-size: 15px; 
+            font-style: normal;
+            color: darkblue;  
+        }
+
+        .archiveSec {
+            float:right; 
+            color: #585858; 
+            font-weight: bold; 
+            font-size: small; 
+            font-style: oblique;
+         }
+
+         .releaseTitle {
+            text-align:center; 
+            margin-top: -20px; 
+            margin-bottom: -10px;
          }
       </style>
    </head>
@@ -35,12 +81,17 @@
       <h1 class="pageTitle">SFDC Tech Hub</h1>
       </article> 
 
-      <!--SFDC Developer release Updates-->
-      <article class="dev">
-         <h3 style="text-align:center; margin-top: -20px; margin-bottom: -10px;">SFDC Developer Release Updates</h3>
+      <!--SFDC Developer release Updates Nav -->
+      <article class="devNav" id="devNav" onclick="loadSfdcDevPage();">
+         <h3 style="text-align:center;">SFDC Developer Release Updates</h3>
+      </article>
+
+      <!--SFDC Developer release Updates Section-->
+      <article class="dev" id="dev">
+         <h3 class="releaseTitle">SFDC Developer Release Updates</h3>
          <div style="padding: 10px;">
-            <span style="float:left; color: #585858; font-weight: bold; font-size: small; font-style: oblique;">Release : <span style="font-size: 15px; font-style: normal;color: darkblue;">Spring 23</span></span>
-            <span style="float:right; color: #585858; font-weight: bold; font-size: small; font-style: oblique;">Archives</span>
+            <span class="releaseSec">Release : <span class="releaseName">Spring 23</span></span>
+            <span class="archiveSec">Archives</span>
          </div><br/>
          <div id="includeDevHtml" class="sfdcDevDiv"></div>
       </article>
