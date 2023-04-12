@@ -27,7 +27,7 @@ if you want to contribute to this repository, please follow the guidelines as be
   
 # Your PR is merged!
 
-    Congratulations 🎉🎉 The GitHub team thanks you ✨.
+    Congratulations 🎉🎉 The SFDC TechHub team thanks you ✨.
 
     Once your PR is merged, your contributions will be publicly visible on the SFDC TechHub Repository.
 
