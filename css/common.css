@@ -26,7 +26,7 @@
     filter: drop-shadow(0 0 2px black);
     height: auto;
     width: 30%;
-    margin: auto;
+    /*margin: auto;*/
     cursor: pointer;
     margin-top: 10px;
 }
