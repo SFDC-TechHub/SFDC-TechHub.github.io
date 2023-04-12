@@ -8,12 +8,12 @@
          });
 
          function loadSfdcDevPage(){
-            document.getElementById("devNav").style.display = "none";
+            document.getElementById("indexDev").style.display = "none";
             document.getElementById("dev").style.display = "block";
          }
 
         function goBack(){
-            document.getElementById("devNav").style.display = "block";
+            document.getElementById("indexDev").style.display = "block";
             document.getElementById("dev").style.display = "none";
         }
       </script>
@@ -24,17 +24,23 @@
          <h1 class="pageTitle">SFDC Tech Hub</h1>
       </article> 
 
-      <!--SFDC Developer release Updates Nav -->
-      <article class="devNav" id="devNav" onclick="loadSfdcDevPage();">
-         <h3 style="text-align:center;">SFDC Developer Release Updates</h3>
-      </article>
+      <div id="indexDev">
+         <!--SFDC Developer release Updates Nav -->
+         <article class="devNav" id="devNav" onclick="loadSfdcDevPage();">
+            <h3 class="navTitle">Developer Updates</h3>
+            <p class="navPara">
+               Includes enhancements related to Lightning components, Visualforce, Apex, APIs, Development Tools etc. which will help you develop amazing applications.
+            </p>
+         </article>
+
+      </div>
 
       <!--SFDC Developer release Updates Section-->
       <article class="dev" id="dev">
          <img src="/images/back.png" style="width: 20px; margin: -15 5 5 5;" onclick="goBack();" alt="Go Back" title="Go Back">
-         <h3 class="releaseTitle">SFDC Developer Release Updates</h3>
+         <h3 class="releaseTitle">Developer Release Updates</h3>
          <div style="padding: 10px;">
-            <span class="releaseSec">Release : <span class="releaseName">Spring 23</span></span>
+            <span class="releaseSec">Release : <span class="releaseName">Spring ’23</span></span>
             <span class="archiveSec">Archives</span>
          </div><br/>
          <div id="includeDevHtml" class="sfdcDevDiv"></div>
