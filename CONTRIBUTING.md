@@ -9,11 +9,15 @@
     Fork the repo so that you can make your changes without affecting the original project until you're ready to merge them.
 
   - Create a working branch (branch name following the format as below) and start with your changes!
+  
       Dev_Release_<your_name> or Admin_Release_<your_name> (For e.g. -> Dev_Spring23_Subhojeet)
 
 # Commit your update
 
-  - Make changes on the respective file . For e.g -> For Development feature , make changes on /dev/developerUpdates.html
+  - Make changes on the respective file . 
+  
+       For e.g -> For Development feature , make changes on /dev/developerUpdates.html
+       
   - Using proper comments in the code, test it properly.
   - Commit the changes once you are happy with them. Don't forget to self-review to speed up the review process⚡.
 
