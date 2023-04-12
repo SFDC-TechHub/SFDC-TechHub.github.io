@@ -1,6 +1,7 @@
 
 # Collaboration:
-if you want to contribute to this repository, please follow the guidelines as below:
+
+    If you want to contribute to this repository, please follow the guidelines as below:
 
 ## Make changes locally
 
