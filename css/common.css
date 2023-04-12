@@ -21,7 +21,7 @@
 
  .devNav {
     padding: 5px; 
-    background-color: #b5e6b5;
+    background-color: #FFE7E7;
     border-radius: 5px;
     filter: drop-shadow(0 0 2px black);
     height: auto;
@@ -61,11 +61,15 @@
 
  .navTitle {
    text-align:center; 
-   color: brown;
+   color: #f00;
  }
 
  .navPara {
-   font-size: 12px;
+   font-size: 13px;
    padding: 10px 10px 15px 10px; 
+   line-height: 1rem;
+ }
+
+ .indexDev {
    font-family: sans-serif;
  }
