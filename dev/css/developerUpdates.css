@@ -50,4 +50,5 @@
 
 .codeBlock {
     filter: drop-shadow(0 0 2px black);
+    margin-bottom: 10px;
 }
