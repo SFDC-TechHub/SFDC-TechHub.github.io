@@ -8,3 +8,4 @@ if you want to contribute to this repository, please follow the guidelines as be
   - Make changes on the respective file . For e.g -> For Development feature , make changes on /dev/developerUpdates.html
   - Using proper comments in the code, test it properly.
   - Raise a Pull Request and add me as an approver. Please make sure to provide details of the release feature that you made changes for in the PR comments.
+  - Once done, just wait for your code to be approved and added to this repository.
