@@ -53,3 +53,42 @@
     filter: drop-shadow(0 0 2px black);
     margin-bottom: 10px;
 }
+
+.featureNav {
+    padding: 5px; 
+    background-color: #E7ECFF;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 2px black);
+    height: auto;
+    width: 20%;
+    /*margin: auto;*/
+    cursor: pointer;
+    margin: 10px;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.featureNav .featureNavTitle {
+    color: #5677f5;
+    margin: 10px 10px 0 10px; 
+}
+
+.featureNav .featureNavTextDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.featureNav .featureNavTextDiv p {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.featureNav .featureNavTextDiv p  span{
+    font-size: 1.25rem;
+    text-decoration:none;
+    color: #5677f5; 
+    font-weight: 700;
+}
