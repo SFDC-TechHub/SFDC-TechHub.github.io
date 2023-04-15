@@ -1,39 +1,132 @@
 <html>
   <head>
     <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    <script>
+      function loadFeature(featureSectionId){
+        document.getElementById("featureNav").style.display = "none";
+        document.getElementById(featureSectionId).style.display = "block";
+     }
+
+      function goBackToFeatureList(featureSectionId){
+        document.getElementById("featureNav").style.display = "block";
+        document.getElementById(featureSectionId).style.display = "none";
+      }
+
+      function goBackToMain(featureSectionId){
+        document.getElementById(featureSectionId).style.display = "none";
+        document.getElementById("featureNav").style.display = "block";
+        parent.goBack();
+      }
+
+    </script>
   </head>
   <body>
     <article style="padding:20px; margin-top: -20px;">
+      
+      <!-- Feature Navigation Section Starts Here-->
+      <div id="featureNav">
+        <img src="/images/back.png" style="width: 20px; margin: -50 5 5 -15; float:left;" onclick="goBackToMain('featureSection1');" alt="Go Back" title="Go Back">
+        
+        <div style="display:flex; flex-direction:row;">
+          <!-- First Feature Navigation section-->
+          <article class="featureNav" onclick="loadFeature('featureSection1');">
+            <h3 class="featureNavTitle">Feature One Test</h3><br/>
+            <div class ="featureNavTextDiv">
+              <img src="/dev/images/feature.png" style="width: 100%;"/>
+              <div>
+                <!--<p class="navPara">
+                  Includes enhancements related to Lightning components, Visualforce, Apex, APIs, Development Tools etc. which will help you develop amazing applications.
+                </p>-->
+                <p>
+                  <span>Learn &gt;&gt;</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Second Feature Navigation section-->
+          <article class="featureNav" onclick="loadFeature('featureSection2');">
+            <h3 class="featureNavTitle">Feature Two Test</h3><br/>
+            <div class ="featureNavTextDiv">
+              <img src="/dev/images/feature.png" style="width: 100%;"/>
+              <div>
+                <p>
+                  <span>Learn &gt;&gt;</span>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Feature Navigation Section Ends Here-->
+
       <!-- First Update Starts Here-->
-      <article class="featureSection">
-        <div name="featureTitle" class="featureTitle">
-          <span class="index">1</span>
-          <span class="label">Feature one test</span>
-          <div class="identityDiv">
-            <span class="identityText">Contributed by : </span>
-            <span class="identityVal">
-              Subhojeet Ghosh 
-              <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
-                <img src="/images/LN.png" class="IdImg">
-              </a>
-            </span>
+      <div id="featureSection1" style="display:none;">
+        <img src="/images/back.png" style="width: 20px; margin: -50 5 5 -15; float:left;" onclick="goBackToFeatureList('featureSection1');" alt="Go Back" title="Go Back">
+        <article class="featureSection">
+          <div name="featureTitle" class="featureTitle">
+            <span class="index">1</span>
+            <span class="label">Feature One test</span>
+            <div class="identityDiv">
+              <span class="identityText">Contributed by : </span>
+              <span class="identityVal">
+                Subhojeet Ghosh 
+                <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                  <img src="/images/LN.png" class="IdImg">
+                </a>
+              </span>
+            </div>
           </div>
-        </div>
-        
-        <div name="featureBody" class="featureBody">
-          <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        </div>
-        
-        <div name="codeBlock" class="codeBlock">
-          <iframe width="100%" height="200" style="border:0;"     
-              src="data:text/html;charset=utf-8,
-              <head><base target='_blank' /></head>
-              <body><script src='https://gist.github.com/Subhojeet21/3a32cd78cd84a2360e2f73a2849ccf91.js'></script>
-              </body>">
-          </iframe>
-        </div>
-      </article> <br/>
+          
+          <div name="featureBody" class="featureBody">
+            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          </div>
+          
+          <div name="codeBlock" class="codeBlock">
+            <iframe width="100%" height="200" style="border:0;"     
+                src="data:text/html;charset=utf-8,
+                <head><base target='_blank' /></head>
+                <body><script src='https://gist.github.com/Subhojeet21/3a32cd78cd84a2360e2f73a2849ccf91.js'></script>
+                </body>">
+            </iframe>
+          </div>
+        </article> 
+      </div><br/>
       <!-- First Update Ends Here-->
+
+      <!-- Second Update Starts Here-->
+      <div id="featureSection2" style="display:none;">
+        <img src="/images/back.png" style="width: 20px; margin: -68 5 5 -15; float:left;" onclick="goBackToFeatureList('featureSection2');" alt="Go Back" title="Go Back">
+        <article class="featureSection">
+          <div name="featureTitle" class="featureTitle">
+            <span class="index">1</span>
+            <span class="label">Feature Two test</span>
+            <div class="identityDiv">
+              <span class="identityText">Contributed by : </span>
+              <span class="identityVal">
+                Subhojeet Ghosh 
+                <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                  <img src="/images/LN.png" class="IdImg">
+                </a>
+              </span>
+            </div>
+          </div>
+          
+          <div name="featureBody" class="featureBody">
+            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          </div>
+          
+          <div name="codeBlock" class="codeBlock">
+            <iframe width="100%" height="200" style="border:0;"     
+                src="data:text/html;charset=utf-8,
+                <head><base target='_blank' /></head>
+                <body><script src='https://gist.github.com/Subhojeet21/3a32cd78cd84a2360e2f73a2849ccf91.js'></script>
+                </body>">
+            </iframe>
+          </div>
+        </article> 
+      </div><br/>
+      <!-- Second Update Ends Here-->
       
     </article>
   </body>
