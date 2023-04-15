@@ -15,7 +15,8 @@
       function goBackToMain(featureSectionId){
         document.getElementById(featureSectionId).style.display = "none";
         document.getElementById("featureNav").style.display = "block";
-        parent.goBack();
+        //parent.goBack();
+        location.reload(true);
       }
 
     </script>
