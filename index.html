@@ -10,11 +10,13 @@
          function loadSfdcDevPage(){
             document.getElementById("indexDev").style.display = "none";
             document.getElementById("dev").style.display = "block";
+            document.getElementById("includeDevHtml").style.display = "block";
          }
 
         function goBack(){
             document.getElementById("indexDev").style.display = "block";
             document.getElementById("dev").style.display = "none";
+            document.getElementById("includeDevHtml").style.display = "none";
         }
       </script>
    </head>
@@ -47,13 +49,13 @@
 
       <!--SFDC Developer release Updates Section-->
       <article class="dev" id="dev">
-         <img src="/images/back.png" style="width: 20px; margin: -15 5 5 5;" onclick="goBack();" alt="Go Back" title="Go Back">
+         <!--<img src="/images/back.png" style="width: 20px; margin: -15 5 5 5;" onclick="goBack();" alt="Go Back" title="Go Back">-->
          <h3 class="releaseTitle">Developer Release Updates</h3>
-         <div style="padding: 10px;">
+         <div style="padding: 15px 10px 10px 10px;">
             <span class="releaseSec">Release : <span class="releaseName">Spring ’23</span></span>
             <span class="archiveSec">Archives</span>
          </div><br/>
-         <div id="includeDevHtml" class="sfdcDevDiv"></div>
+         <div id="includeDevHtml" class="sfdcDevDiv" style="display:none;"></div>
       </article>
       
    </body>
