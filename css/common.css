@@ -90,6 +90,11 @@
    filter: drop-shadow(0 0 1pc black);
 }
 
+.footerSection {
+   text-align: center; 
+   background-color: ivory;
+ }
+
  .container {
    flex-grow: 1;
    margin: 0 auto;
