@@ -22,42 +22,44 @@
    </head>
   
    <body>
-      <article class="main">
-         <h1 class="pageTitle">SFDC Release Hub</h1><br/>
-         <!--<img style="float: right; width: 10rem; size: 10px; margin: -40px 10px 0 0;" src="https://counter2.optistats.ovh/private/freecounterstat.php?c=pzdg5ecmpsty41q3ga1mebz8h2te1d1d" border="0" title="web page visitor counter" alt="web page visitor counter">-->
-      </article> 
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <div class="container">
+         <article class="main">
+            <h1 class="pageTitle">SFDC Release Hub</h1><br/>
+            <!--<img style="float: right; width: 10rem; size: 10px; margin: -40px 10px 0 0;" src="https://counter2.optistats.ovh/private/freecounterstat.php?c=pzdg5ecmpsty41q3ga1mebz8h2te1d1d" border="0" title="web page visitor counter" alt="web page visitor counter">-->
+         </article> 
 
-      <!-- SFDC Developer Nav -->
-      <div id="indexDev" class="indexDev">
-         <!--SFDC Developer release Updates Nav -->
-         <article class="devNav" id="devNav" onclick="loadSfdcDevPage();">
-            <h3 class="navTitle">Developer Updates</h3><br/>
-            <div class ="navTextDiv">
-               <img src="/images/dev.png" style="width: 10rem;"/>
-               <div>
-                  <p class="navPara">
-                     Includes enhancements related to Lightning components, Visualforce, Apex, APIs, Development Tools etc. which will help you develop amazing applications.
-                  </p>
-                  <p style="padding: 20px;margin: 20px;background-color: white;border-radius: 5px;width: 40%;">
-                     <span style="font-size: 1.25rem;text-decoration:none;color: #f00;font-weight: 700;">Details &gt;&gt;</span>
-                  </p>
-               </div>
-           </div>
+         <!-- SFDC Developer Nav -->
+         <div id="indexDev" class="indexDev">
+            <!--SFDC Developer release Updates Nav -->
+            <article class="devNav" id="devNav" onclick="loadSfdcDevPage();">
+               <h3 class="navTitle">Developer Updates</h3><br/>
+               <div class ="navTextDiv">
+                  <img src="/images/dev.png" style="width: 10rem;"/>
+                  <div>
+                     <p class="navPara">
+                        Includes enhancements related to Lightning components, Visualforce, Apex, APIs, Development Tools etc. which will help you develop amazing applications.
+                     </p>
+                     <p  class="navbutton">
+                        <span>Details &gt;&gt;</span>
+                     </p>
+                  </div>
+            </div>
+            </article>
+
+         </div>
+
+         <!--SFDC Developer release Updates Section-->
+         <article class="dev" id="dev">
+            <!--<img src="/images/back.png" style="width: 20px; margin: -15 5 5 5;" onclick="goBack();" alt="Go Back" title="Go Back">-->
+            <h3 class="releaseTitle">Developer Release Updates</h3>
+            <div style="padding: 15px 10px 10px 10px;">
+               <span class="releaseSec">Release : <span class="releaseName">Spring ’23</span></span>
+               <span class="archiveSec">Archives</span>
+            </div><br/>
+            <div id="includeDevHtml" class="sfdcDevDiv" style="display:none;"></div>
          </article>
-
       </div>
-
-      <!--SFDC Developer release Updates Section-->
-      <article class="dev" id="dev">
-         <!--<img src="/images/back.png" style="width: 20px; margin: -15 5 5 5;" onclick="goBack();" alt="Go Back" title="Go Back">-->
-         <h3 class="releaseTitle">Developer Release Updates</h3>
-         <div style="padding: 15px 10px 10px 10px;">
-            <span class="releaseSec">Release : <span class="releaseName">Spring ’23</span></span>
-            <span class="archiveSec">Archives</span>
-         </div><br/>
-         <div id="includeDevHtml" class="sfdcDevDiv" style="display:none;"></div>
-      </article>
-      
    </body>
   
 </html>
