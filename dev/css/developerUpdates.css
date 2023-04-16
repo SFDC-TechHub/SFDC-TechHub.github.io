@@ -54,6 +54,10 @@
     margin-bottom: 10px;
 }
 
+.featureNav:hover {
+    filter: drop-shadow(0 0 1pc black);
+}
+
 /*.featureNav {
     padding: 5px; 
     background-color: #E7ECFF;
