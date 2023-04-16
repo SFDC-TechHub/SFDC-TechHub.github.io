@@ -19,17 +19,17 @@
     text-decoration: underline;
  }
 
- .devNav {
+ /*.devNav {
     padding: 5px; 
     background-color: #FFE7E7;
     border-radius: 5px;
     filter: drop-shadow(0 0 2px black);
     height: auto;
     width: 40%;
-    /*margin: auto;*/
+    /*margin: auto;*
     cursor: pointer;
     margin-top: 10px;
-}
+}*/
 
 .releaseSec {
     float:left; 
@@ -80,6 +80,215 @@
    flex-wrap: wrap;
  }
 
-.navTextDiv {
+/*.navTextDiv {
    display:flex;
- }
+   flex-direction:row; 
+   flex-wrap: wrap;
+ }*/
+
+ .container {
+   flex-grow: 1;
+   margin: 0 auto;
+   position: relative;
+   width: auto
+}
+
+@media screen and (min-width: 1080px) {
+   .devNav {
+      padding: 5px; 
+      background-color: #FFE7E7;
+      border-radius: 5px;
+      filter: drop-shadow(0 0 2px black);
+      height: auto;
+      width: 40%;
+      /*margin: auto;*/
+      cursor: pointer;
+      margin-top: 10px;
+  }
+  
+  .navbutton {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      width: 40%;
+  }
+
+  .navbutton span {
+      font-size: 1.25rem;
+      text-decoration:none;
+      color: #f00;
+      font-weight: 700;
+  }
+
+  .navTextDiv {
+      display:flex;
+   }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1080px) {
+   .devNav {
+      padding: 5px; 
+      background-color: #FFE7E7;
+      border-radius: 5px;
+      filter: drop-shadow(0 0 2px black);
+      height: auto;
+      width: 40%;
+      /*margin: auto;*/
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  .navbutton {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      width: 45%;
+   }
+
+   .navbutton span {
+      font-size: 1rem;
+      text-decoration:none;
+      color: #f00;
+      font-weight: 700;
+   }
+
+   .navTextDiv {
+      display:flex;
+   }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+   .devNav {
+      padding: 5px; 
+      background-color: #FFE7E7;
+      border-radius: 5px;
+      filter: drop-shadow(0 0 2px black);
+      height: auto;
+      width: 45%;
+      /*margin: auto;*/
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  .navbutton {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      width: 45%;
+   }
+
+   .navbutton span {
+      font-size: 0.7rem;
+      text-decoration:none;
+      color: #f00;
+      font-weight: 700;
+   }
+
+   .navTextDiv {
+      display:flex;
+   }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+   .devNav {
+      padding: 5px; 
+      background-color: #FFE7E7;
+      border-radius: 5px;
+      filter: drop-shadow(0 0 2px black);
+      height: auto;
+      width: 100%;
+      /*margin: auto;*/
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  .navbutton {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      width: 30%;
+   }
+
+   .navbutton span {
+      font-size: 1rem;
+      text-decoration:none;
+      color: #f00;
+      font-weight: 700;
+   }
+
+   .navTextDiv {
+      display:flex;
+   }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+   .devNav {
+      padding: 5px; 
+      background-color: #FFE7E7;
+      border-radius: 5px;
+      filter: drop-shadow(0 0 2px black);
+      height: auto;
+      width: 100%;
+      /*margin: auto;*/
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  .navbutton {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      width: 40%;
+   }
+
+   .navbutton span {
+      font-size: 0.7rem;
+      text-decoration:none;
+      color: #f00;
+      font-weight: 700;
+   }
+
+   .navTextDiv {
+      display:flex;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .devNav {
+      padding: 5px; 
+      background-color: #FFE7E7;
+      border-radius: 5px;
+      filter: drop-shadow(0 0 2px black);
+      height: auto;
+      width: 100%;
+      /*margin: auto;*/
+      cursor: pointer;
+      margin-top: 10px;
+  }
+
+  .navbutton {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 5px;
+      width: 40%;
+   }
+
+   .navbutton span {
+      font-size: 1rem;
+      text-decoration:none;
+      color: #f00;
+      font-weight: 700;
+   }
+
+   .navTextDiv {
+      display:flex;
+      flex-direction:row; 
+      flex-wrap: wrap;
+   }
+}
