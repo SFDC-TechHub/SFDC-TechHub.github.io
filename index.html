@@ -18,6 +18,10 @@
             document.getElementById("dev").style.display = "none";
             document.getElementById("includeDevHtml").style.display = "none";
         }
+         
+        function loadDevArchives(){
+            $("#includeDevHtml").load("/dev/developerUpdates.html");
+        }
       </script>
    </head>
   
@@ -55,7 +59,7 @@
             <h3 class="releaseTitle">Developer Release Updates</h3>
             <div style="padding: 15px 10px 10px 10px;">
                <span class="releaseSec">Release : <span class="releaseName">Spring ’23</span></span>
-               <span class="archiveSec">Archives</span>
+               <span class="archiveSec" onclick="loadDevArchives();"><a href="/dev/archives/archive.html">Archives</a></span>
             </div><br/>
             <div id="includeDevHtml" class="sfdcDevDiv" style="display:none;"></div>
          </article>
