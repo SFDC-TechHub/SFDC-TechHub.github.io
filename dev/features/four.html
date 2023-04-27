@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">4</span>
+                <div style="text-align:left;"><span class="label">Lightning Components: Synchronize Component Data Without a Page Refresh Using RefreshView API (GA)</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <p>RefreshView API supports refreshes that are triggered by end users or web components, updates the data for a specific hierarchy of components, known as a view, without reloading an entire page.
+                LWC lacked the data refresh API and could only refresh using an Aura wrapper and the legacy <pre style="display: inline;">force:refreshView</pre> which was not meeting the requirements of  modern web development.
+                The RefreshView API and lightning/refresh module provide a standard way to refresh component data in custom LWC and Aura components.
+                This feature is Generally Available (GA) now from this release.
+              </p>
+
+              <p><b>Important points to note for this feature:</b>
+                <ul>
+                    <li>Lightning Web Security (LWS) must be enabled in the Salesforce org.</li>
+                    <li>RefreshView API supports refreshes that are triggered by end users or web components.</li>
+                    <li>The base Lightning Aura components currently don’t support RefreshView API.</li>
+                    <li>Lightning Locker doesn’t support RefreshView API.</li>
+                </ul>
+              </p>
+
+              <p><b>How to use ?</b><br/>
+                Below is a example where on click of a button "Refresh" (user-defined action), it fetches the latest account and updates the data in the UI with the account name without reloading the entire page using RefreshView API.
+              </p>
+
+              <div name="codeBlock" class="codeBlock">
+                <iframe width="100%" height="1850" style="border:0;"     
+                    src="data:text/html;charset=utf-8,
+                    <head><base target='_blank' /></head>
+                    <body><script src='https://gist.github.com/Subhojeet21/106aecd0e5eff5bebdb63c147f7f2449.js'></script>
+                    </body>">
+                </iframe>
+              </div>
+
+              <video style="width: 70%; margin-left:10%; border-radius: 5px; filter: drop-shadow(0 0 2px black);"  controls>
+                <source src="/dev/videos/RefreshView.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_lc_refreshview.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>

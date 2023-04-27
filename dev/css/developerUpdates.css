@@ -26,6 +26,8 @@
 .featureTitle .identityDiv {
     margin-left: 30px; 
     font-style: oblique;
+    padding-bottom: 15px;
+    width: fit-content;
 }
 
 .identityDiv .identityText {
@@ -138,8 +140,9 @@
     }
 
     .featureNav .featureNavTitle {
-        color: #5677f5;
+        color: #5b6db3;
         margin: 10px 10px 0 10px; 
+        font-family: math;
     }
     
     .featureNav .featureNavTextDiv {
@@ -161,6 +164,10 @@
         color: #5677f5; 
         font-weight: 700;
     }
+
+    /*.identityDiv {
+        width: 25%;
+    }*/
  }
 
  @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -186,8 +193,9 @@
     }
 
     .featureNav .featureNavTitle {
-        color: #5677f5;
+        color: #5b6db3;
         margin: 10px 10px 0 10px; 
+        font-family: math;
     }
     
     .featureNav .featureNavTextDiv {
@@ -209,6 +217,10 @@
         color: #5677f5; 
         font-weight: 700;
     }
+
+    /*.identityDiv {
+        width: 35%;
+    }*/
  }
 
  @media screen and (min-width: 568px) and (max-width: 768px) {
@@ -234,8 +246,9 @@
     }
 
     .featureNav .featureNavTitle {
-        color: #5677f5;
+        color: #5b6db3;
         margin: 10px 10px 0 10px; 
+        font-family: math;
     }
     
     .featureNav .featureNavTextDiv {
@@ -257,6 +270,10 @@
         color: #5677f5; 
         font-weight: 700;
     }
+
+    /*.identityDiv {
+        width: 50%;
+    }*/
  }
 
  @media screen and (min-width: 450px) and (max-width: 568px) {
@@ -282,8 +299,9 @@
     }
 
     .featureNav .featureNavTitle {
-        color: #5677f5;
+        color: #5b6db3;
         margin: 10px 10px 0 10px; 
+        font-family: math;
     }
     
     .featureNav .featureNavTextDiv {
@@ -305,6 +323,10 @@
         color: #5677f5; 
         font-weight: 700;
     }
+
+    /*.identityDiv {
+        width: 70%;
+    }*/
  }
 
  @media screen and (max-width: 450px) {
@@ -330,8 +352,9 @@
     }
 
     .featureNav .featureNavTitle {
-        color: #5677f5;
+        color: #5b6db3;
         margin: 10px 10px 0 10px; 
+        font-family: math;
     }
     
     .featureNav .featureNavTextDiv {
@@ -353,4 +376,9 @@
         color: #5677f5; 
         font-weight: 700;
     }
+
+    /*.identityDiv {
+        display: flex;
+        flex-direction: column;
+    }*/
  }

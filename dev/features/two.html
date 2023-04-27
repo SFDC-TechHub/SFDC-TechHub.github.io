@@ -5,8 +5,10 @@
     <body>
         <article class="featureSection">
             <div name="featureTitle" class="featureTitle">
-              <span class="index">2</span>
-              <span class="label">Feature Two test</span>
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">2</span>
+                <div style="text-align:left;"><span class="label">Lightning Components: Enable Third-Party Integrations with Light DOM (GA)</span></div>
+              </div>
               <div class="identityDiv">
                 <span class="identityText">Contributed by : </span>
                 <span class="identityVal">
@@ -17,19 +19,60 @@
                 </span>
               </div>
             </div>
-            
+            <br/>
             <div name="featureBody" class="featureBody">
-              <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              <p>LWC render in shadow DOM by default. This provides a strong encapsulation but poses challenges in global styling and many 3rd party integrations.
+                In this release, Light DOM is now generally available (GA). 
+              </p>
+                
+              <p><b>Advantages of Light DOM:</b><br/>
+                <ul>
+                  <li>With Light DOM, the components are now attached to the host element instead of its shadow tree.</li>
+                  <li>This facilitates global styling. Therefore custom branding can be applied easily to the components & its child components.</li>
+                  <li>This allows standard browser query APIs like <pre style="display: inline;">"querySelector"</pre> & <pre style="display: inline;">"querySelectorAll"</pre> to traverse the DOM. No need to traverse the shadow root. Therefore it provides simple integration with third-party libraries and tools.</li>
+                  <li>Events bubble through components even if <pre style="display: inline;">"composed"</pre> is <pre style="display: inline;">"false"</pre> in light DOM, since there's no shadow root.
+                    With light DOM, events aren’t retargeted i.e, <pre style="display: inline;">"event.target"</pre> returns the button that triggered the event, instead of the containing component.</li>
+                </ul>
+              </p>
+
+              <p><b>Supported:</b><br/>
+                <ul>
+                  <li>A Light DOM component can contain a shadow DOM component.</li>
+                  <li>a shadow DOM component can also contain a light DOM component.</li>
+                  <li>In light DOM, you can use scoped styles <pre style="display: inline;">(*.scoped.css)</pre> to apply CSS to elements on the component only. This behavior is similar to style encapsulation with shadow DOM.</li>
+                </ul>
+              </p>
+
+              <p><b>Not Supported:</b><br/>
+                <ul>
+                  <li>Light DOM cannot be restricted to specific namespaces.</li>
+                  <li>Base components are always rendered in shadow DOM.</li>
+                  <li>Aura components can't use light DOM. However, an Aura component can contain an LWC component that uses light DOM.</li>
+                </ul>
+              </p>
+
+              <p><b>How to enable Light DOM in Your Component ?</b>
+              </p>
+
+              <div name="codeBlock" class="codeBlock">
+                <iframe width="100%" height="450" style="border:0;"     
+                    src="data:text/html;charset=utf-8,
+                    <head><base target='_blank' /></head>
+                    <body><script src='https://gist.github.com/Subhojeet21/70348f48f977b256d8ebbd06738bdfff.js'></script>
+                    </body>">
+                </iframe>
+              </div>
+
+              <br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_lwc_light_dom.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                  <li><a style="text-decoration: none;" href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.create_light_dom" target="blank">Light DOM</a></li>
+                </ol>
+              </p>
             </div>
             
-            <div name="codeBlock" class="codeBlock">
-              <iframe width="100%" height="200" style="border:0;"     
-                  src="data:text/html;charset=utf-8,
-                  <head><base target='_blank' /></head>
-                  <body><script src='https://gist.github.com/Subhojeet21/3a32cd78cd84a2360e2f73a2849ccf91.js'></script>
-                  </body>">
-              </iframe>
-            </div>
         </article>
     </body>
 </html>
