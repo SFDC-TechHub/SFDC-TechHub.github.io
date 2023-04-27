@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">5</span>
+                <div style="text-align:left;"><span class="label">Lightning Components: Create Scoped Slots in Light DOM</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <p>Light DOM LWC now supports Scoped Slots.
+              </p>
+
+              <p><b>Use Case</b><br/>
+                <ul>
+                  <li>Scoped slots are used to access data from a child component and then render it in slotted content inside of a parent component.</li>
+                  <li>Any style on the parent applies to the scoped slots because the slotted content belong to the parent component.</li>
+                </ul>
+              </p>
+
+              <p><b>Considerations:</b><br/>
+                <ul>
+                  <li>Child component must use light DOM. Scoped slots in shadow DOM aren’t supported.</li>
+                  <li>The parent component can be a light DOM or shadow DOM component.</li>
+                  <li>To introduce scoped slots, add the directives <pre style="display: inline;">lwc:slot-data</pre> in parent component & <pre style="display: inline;">lwc:slot-bind</pre> in the child component.</li>
+                </ul>
+              </p>
+
+              <p><b>How to use ?</b><br/>
+                Here is an example to access the list of accounts data from child component on click of "Load Data" button and render it in parent component using Scoped Slots.
+              </p>
+
+              <div name="codeBlock" class="codeBlock">
+                <iframe width="100%" height="1400" style="border:0;"     
+                    src="data:text/html;charset=utf-8,
+                    <head><base target='_blank' /></head>
+                    <body><script src='https://gist.github.com/Subhojeet21/d1496dd17554b709eb01e72a78fa1de4.js'></script>
+                    </body>">
+                </iframe>
+              </div>
+
+              <video style="width: 70%; margin-left:10%; border-radius: 5px; filter: drop-shadow(0 0 2px black);"  controls>
+                <source src="/dev/videos/ScopedSlots.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_lwc_scoped_slots.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
