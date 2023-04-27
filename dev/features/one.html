@@ -5,8 +5,10 @@
     <body>
         <article class="featureSection">
             <div name="featureTitle" class="featureTitle">
-              <span class="index">1</span>
-              <span class="label">Feature One test</span>
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">1</span>
+                <div style="text-align:left;"><span class="label">Lightning Components: Use Lightning Web Security for LWC & Aura Components (GA)</span></div>
+              </div>
               <div class="identityDiv">
                 <span class="identityText">Contributed by : </span>
                 <span class="identityVal">
@@ -17,19 +19,31 @@
                 </span>
               </div>
             </div>
-            
+            <br/>
             <div name="featureBody" class="featureBody">
-              <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              <p>Lightning Locker has been the default security architecture for Lightning components. LWS started to replace the Lightning Locker for LWC in Sprint '22.
+                Lightning Web Security (LWS) for Aura components is now generally available (GA) too.
+              </p>
+                
+              <p>However Salesforce will not be automatically enabling LWS for existing orgs in this release.
+                But new orgs, scratch orgs and sandbox orgs have LWS for LWC & Aura components enabled by default, beginning from Spring'23 release itself.
+              </p>
+
+              <p>
+                <b>How to enable ?</b><br/>
+                Setup &rarr; session Settings &rarr; "Use Lightning Web Security for Lightning web components and Aura components" 
+                <br/><br/>
+                <img src="/dev/images/lws.jpg" style="width: 70%; margin-left:10%; border-radius: 5px; filter: drop-shadow(0 0 2px black);"/>
+              </p>
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_lc_lws.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
             </div>
             
-            <div name="codeBlock" class="codeBlock">
-              <iframe width="100%" height="200" style="border:0;"     
-                  src="data:text/html;charset=utf-8,
-                  <head><base target='_blank' /></head>
-                  <body><script src='https://gist.github.com/Subhojeet21/3a32cd78cd84a2360e2f73a2849ccf91.js'></script>
-                  </body>">
-              </iframe>
-            </div>
         </article>
     </body>
 </html>
