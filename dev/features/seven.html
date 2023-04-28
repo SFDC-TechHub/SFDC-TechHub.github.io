@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">6</span>
+                <div style="text-align:left;"><span class="label">Lightning Components: Base Lightning Component Internal DOM Structure Changes for Future Native Shadow Support</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <p>Salesforce is working to align the base Lightning components with Web Components Standards by preparing them to support native shadow DOM.
+                These updates change the internal DOM structure of these base Lightning components.  
+              </p>
+
+              <p><b>Advantages:</b><br/>
+                <ul>
+                  <li>To enhance the performance of these base lightning components.</li>
+                  <li>To comply with Web Components Standards.</li>
+                </ul>
+              </p>
+
+              <p><b>Which all base Lightning components have been updated so far ?</b><br/>
+                <ul>
+                    <li>In Spring '23, the internal structure of <pre style="display: inline;">lightning-button</pre> and <pre style="display: inline;">lightning-button-group</pre> were changed.</li>
+                    <li>In Summer '23, following components have been adapted:
+                        <ol>
+                            <li><pre style="display: inline;">lightning-dual-listbox</pre></li>
+                            <li><pre style="display: inline;">lightning-dynamic-icon</pre></li>
+                            <li><pre style="display: inline;">lightning-breadcrumb</pre></li>
+                            <li><pre style="display: inline;">lightning-breadcrumbs</pre></li>
+                            <li><pre style="display: inline;">lightning-vertical-navigation</pre></li>
+                            <li><pre style="display: inline;">lightning-vertical-navigation-section</pre></li>
+                            <li><pre style="display: inline;">lightning-vertical-navigation-item</pre></li>
+                            <li><pre style="display: inline;">lightning-vertical-navigation-overflow</pre></li>
+                            <li><pre style="display: inline;">lightning-vertical-navigation-item-badge</pre></li>
+                            <li><pre style="display: inline;">lightning-vertical-navigation-item-icon</pre></li>
+                        </ol>
+                    </li>
+                </ul>
+              </p>
+
+              <p>
+                Please make sure your tests are not relying on the protected internal DOM structure for the above components. If it does, rewrite them ASAP.
+              </p>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_lc_native_shadow_dom.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
