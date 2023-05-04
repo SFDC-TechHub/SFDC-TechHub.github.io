@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">10</span>
+                <div style="text-align:left;"><span class="label">Platform Events: Track the Publishing of Platform Events with Apex Publish Callbacks (GA)</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <p>Whenever you publish a platform event, the publish operation is queued in Salesforce because this is an asynchronous process.
+                When no intermediate errors are returned, you get the queueing result in <b>Database.SaveResult</b> of an <b>Event.publish call.</b>
+                When the resources ara available, the system then carries out the queued publish call.
+              </p>
+
+              <p>
+                With this new feature <b>Apex Publish Callbacks</b>, one can also get the final result.
+                After getting the final result then one can decide what action to take next, such as attempting to republish the failed events.
+                From Summer '23, this feature is now Generally Available.
+              </p>
+
+              <p><b>How to use ?</b><br/>
+                Here is some sample code to publish a list of events with Apex publish callbacks.
+              </p>
+
+              <div name="codeBlock" class="codeBlock">
+                <iframe width="100%" height="1100" style="border:0;"     
+                    src="data:text/html;charset=utf-8,
+                    <head><base target='_blank' /></head>
+                    <body><script src='https://gist.github.com/Subhojeet21/191ddedfc50ca3239afef9cbd14c9667.js'></script>
+                    </body>">
+                </iframe>
+              </div>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_platform_events_publish_callbacks.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
