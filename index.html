@@ -9,12 +9,14 @@
 
          function loadSfdcDevPage(){
             document.getElementById("indexDev").style.display = "none";
+            document.getElementById("notificationDiv").style.display = "none";
             document.getElementById("dev").style.display = "block";
             document.getElementById("includeDevHtml").style.display = "block";
          }
 
         function goBack(){
             document.getElementById("indexDev").style.display = "block";
+            document.getElementById("notificationDiv").style.display = "block";
             document.getElementById("dev").style.display = "none";
             document.getElementById("includeDevHtml").style.display = "none";
         }
@@ -23,6 +25,12 @@
             $("#includeDevHtml").load("/dev/developerUpdates.html");
         }
       </script>
+      <style>
+         @-webkit-keyframes marqueeAnimation  { 
+            from { -webkit-transform: translateX(100%); }
+            to { -webkit-transform: translateX(-125%); }
+         }
+      </style>
    </head>
   
    <body>
@@ -51,8 +59,14 @@
                      </p>
                   </div>
             </div>
-            </article>
+            </article>         
+         </div>
 
+         <div id="notificationDiv" style="white-space: nowrap; overflow: hidden; padding: 4rem 4rem 2rem 4rem;;">
+            <div style="animation: 20s linear 0s infinite normal none running marqueeAnimation; font-size: medium; font-weight: bold; font-stretch: normal; font-style: normal; font-family: sans-serif; color: darkred;">
+               New features is added : 
+               1. <span style="color:darkgreen;">Platform Events: Track the Publishing of Platform Events with Apex Publish Callbacks (GA)" </span> 
+            </div>
          </div>
 
          <!--SFDC Developer release Updates Section-->
