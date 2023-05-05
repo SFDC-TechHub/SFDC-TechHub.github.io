@@ -108,6 +108,22 @@
    width: auto
 }
 
+.notificationContainer {
+   white-space: nowrap; 
+   overflow: hidden; 
+   padding: 4rem 4rem 2rem 4rem;;
+}
+
+.notificationText {
+   animation: 20s linear 0s infinite normal none running marqueeAnimation; 
+   font-size: medium; 
+   font-weight: bold; 
+   font-stretch: normal; 
+   font-style: normal; 
+   font-family: sans-serif; 
+   color: darkred;
+}
+
 @media screen and (min-width: 1080px) {
    .devNav {
       padding: 5px; 
@@ -138,6 +154,11 @@
 
   .navTextDiv {
       display:flex;
+   }
+
+   @-webkit-keyframes marqueeAnimation  { 
+      from { -webkit-transform: translateX(100%); }
+      to { -webkit-transform: translateX(-125%); }
    }
 }
 
@@ -172,6 +193,11 @@
    .navTextDiv {
       display:flex;
    }
+
+   @-webkit-keyframes marqueeAnimation  { 
+      from { -webkit-transform: translateX(100%); }
+      to { -webkit-transform: translateX(-125%); }
+   }
 }
 
 @media screen and (min-width: 700px) and (max-width: 900px) {
@@ -204,6 +230,11 @@
 
    .navTextDiv {
       display:flex;
+   }
+
+   @-webkit-keyframes marqueeAnimation  { 
+      from { -webkit-transform: translateX(100%); }
+      to { -webkit-transform: translateX(-155%); }
    }
 }
 
@@ -238,6 +269,11 @@
    .navTextDiv {
       display:flex;
    }
+
+   @-webkit-keyframes marqueeAnimation  { 
+      from { -webkit-transform: translateX(100%); }
+      to { -webkit-transform: translateX(-210%); }
+   }
 }
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
@@ -270,6 +306,11 @@
 
    .navTextDiv {
       display:flex;
+   }
+
+   @-webkit-keyframes marqueeAnimation  { 
+      from { -webkit-transform: translateX(100%); }
+      to { -webkit-transform: translateX(-330%); }
    }
 }
 
@@ -305,5 +346,10 @@
       display:flex;
       flex-direction:row; 
       flex-wrap: wrap;
+   }
+
+   @-webkit-keyframes marqueeAnimation  { 
+      from { -webkit-transform: translateX(100%); }
+      to { -webkit-transform: translateX(-500%); }
    }
 }
