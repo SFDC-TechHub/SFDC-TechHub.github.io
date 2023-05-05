@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">11</span>
+                <div style="text-align:left;"><span class="label">Platform Events: Get Enhanced Event Usage Metrics</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <p>You can enable enhanced usage metrics to get more fields and time segments to query <b>PlatformEventUsageMetric</b>.
+                You can break down usage metrics by event name, client ID, event type, and usage type.<br/>
+                And you can get usage data by granular time segments, including daily, hourly, and 15-minute periods.
+              </p>
+
+              <p>
+                When you query <b>PlatformEventUsageMetric</b>, you can use these new fields: <b>EventName, Client, TimeSegment, EventType, and UsageType</b>.
+              </p>
+
+              <p><b>Important Points : </b><br/>
+                <ul>
+                    <li>In API version 58.0 and later, you can enable enhanced usage metrics to get more fields and time segments to query PlatformEventUsageMetric.</li>
+                    <li>If <pre style="display: inline;">StartDate</pre> and <pre style="display: inline;">EndDate</pre> aren't specified, the query defaults to the last 24-hour period.</li>
+                    <li>You must specify the <pre style="display: inline;">StartDate</pre> and <pre style="display: inline;">EndDate</pre> or none. If only <pre style="display: inline;">StartDate</pre> or <pre style="display: inline;">EndDate</pre> are specified, you get an error.</li>
+                    <li>The maximum time span between <pre style="display: inline;">StartDate</pre> and <pre style="display: inline;">EndDate</pre> is 30 days.</li>
+                    <li>The <pre style="display: inline;">StartDate</pre> field can refer to a date that is no more than 60 days.</li>
+                    <li>The <pre style="display: inline;">TimeSegment</pre> field must always be specified in the query's <pre style="display: inline;">WHERE</pre> clause. Optionally, it can also be part of the <pre style="display: inline;">SELECT</pre> statement.</li>
+                    <li>A query must have at least one of <pre style="display: inline;">Name, EventType, or EventName</pre> fields in either <pre style="display: inline;">SELECT</pre> or <pre style="display: inline;"></pre>WHERE</pre> clause.</li>
+                    <li>A query that uses <pre style="display: inline;">EventName</pre> or <pre style="display: inline;">EventType</pre> must also specify the <pre style="display: inline;">UsageType</pre> in either the <pre style="display: inline;">SELECT</pre> or <pre style="display: inline;">WHERE</pre> clause.</li>
+                </ul>
+              </p>
+
+              <p><b>How to use ?</b><br/>
+                <span style="text-decoration:underline; display:block;">Below query returns data for the last 24 hours by aggregating the results per event and per hour.</span><br/>
+                <pre style="display: inline;">
+                    SELECT EventName, EventType, UsageType, Value, StartDate, EndDate 
+                    FROM PlatformEventUsageMetric 
+                    WHERE TimeSegment='Hourly'
+                </pre>
+                <br/>
+                <span style="text-decoration:underline; display:block;">Below query gets daily usage metrics for delivered events grouped by event name and client for a period of two days aggregating the results per event and client for each day.</span><br/>
+                <pre style="display: inline;">
+                    SELECT EventName, EventType, Client, Value, StartDate, EndDate
+                    FROM PlatformEventUsageMetric
+                    WHERE TimeSegment='Daily'
+                    AND UsageType='DELIVERY'
+                    AND StartDate >= 2023-04-01T00:00:00.000Z  
+                    AND EndDate <= 2023-04-03T00:00:00.000Z
+                </pre>
+                <br/>
+                <span style="text-decoration:underline; display:block;">To get the hourly usage metrics for one specific event grouped by client.</span><br/>
+                <pre style="display: inline;">
+                    SELECT EventName,Client, Value, StartDate, EndDate
+                    FROM PlatformEventUsageMetric
+                    WHERE TimeSegment='Hourly'
+                    AND UsageType='DELIVERY'
+                    AND EventName='Order_Event__e'
+                    AND StartDate >= 2023-04-01T00:00:00.000Z  
+                    AND EndDate <= 2023-04-02T00:00:00.000Z
+                </pre>
+                <br/>
+                <span style="text-decoration:underline; display:block;">To get the usage metrics for a 15 minute period for a specific event and for a specific client.</span><br/>
+                <pre style="display: inline;">
+                    SELECT EventName,Client, Value, StartDate, EndDate
+                    FROM PlatformEventUsageMetric
+                    WHERE TimeSegment='FifteenMinutes'
+                    AND UsageType='DELIVERY'
+                    AND EventName='Order_Event__e'
+                    AND client='client1'
+                    AND StartDate >= 2023-04-01T01:00:00.000Z  
+                    AND EndDate <= 2023-04-01T02:00:00.000Z
+                </pre>
+              </p>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_platform_events_enhanced_usage_metrics.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
