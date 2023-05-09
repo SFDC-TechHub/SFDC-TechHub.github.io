@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">14</span>
+                <div style="text-align:left;"><span class="label">Apex: Access Labels in Apex Dynamically</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <p>From Summer '23, you can use the <b>System.Label.get(namespace, label, language)</b> method to get a custom label, optionally specifying a language.
+              </p>
+
+              <p><b>Important Points : </b><br/>
+                <ul>
+                    <li>Previously, retrieving labels required compile-time knowledge of the label API name.</li>
+                    <li>This feature now allows dynamic resolution of label names at run time.</li>
+                    <li>With this feature, if translation exists for a requested language, it will return the translated value overriding the user's current language.</li>
+                    <li>Retrieve the label for a default language setting or for a language and namespace by using <pre style="display: inline;">System.Label.get(namespace, label, language)</pre>.</li>
+                    <li>You can also check if translation exists for a label and language in a namespace by using <pre style="display: inline;">Label.translationExists(namespace, label, language)</pre>. </li>
+                    <li>You cannot access labels that are protected in a different namespace.</li>
+                </ul>
+              </p>
+
+              <p><b>How to use ?</b><br/><br/>
+                In the below example, I have created a Custom Label, <b>Basic_Need</b> and added its translation in German language. Now trying to retrieve the value of this custom label using this new feature. My user's language here is English.<br/>
+              </p>
+
+              <div name="codeBlock" class="codeBlock">
+                <iframe width="100%" height="270" style="border:0;"     
+                    src="data:text/html;charset=utf-8,
+                    <head><base target='_blank' /></head>
+                    <body><script src='https://gist.github.com/Subhojeet21/7d862479f4a54a65616c6b9a269b0099.js'></script>
+                    </body>">
+                </iframe>
+              </div>
+
+              <video style="width: 70%; margin-left:10%; border-radius: 5px; filter: drop-shadow(0 0 2px black);"  controls>
+                <source src="/dev/videos/AccessLabelDynamically.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_apex_system_label_methods.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
