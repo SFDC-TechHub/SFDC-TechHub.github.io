@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">13</span>
+                <div style="text-align:left;"><span class="label">Apex: Manage DML Exceptions in User-Mode Database Operations</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <p>User mode means running apex code by respecting user's permissions (CRUD & FLS) and sharing of records.
+                Previously <b>user-mode DML</b> operations generated a <b>SecurityException</b>. But now from Summer '23 release, they will generate the correct <b>DMLException</b>.
+              </p>
+
+              <p><b>Important Points : </b><br/>
+                <ul>
+                    <li>This change is supported in API version <pre style="display: inline;">58.0</pre> and later only.</li>
+                </ul>
+              </p>
+
+              <p><b>How to use ?</b><br/><br/>
+                In the below example, we are trying to insert an account without populating a requied field, <b>Name</b>. Therefore it will generate exception. Lets this how this works.<br/>
+              </p>
+
+              <div name="codeBlock" class="codeBlock">
+                <iframe width="100%" height="650" style="border:0;"     
+                    src="data:text/html;charset=utf-8,
+                    <head><base target='_blank' /></head>
+                    <body><script src='https://gist.github.com/Subhojeet21/96aff24eff3f00f3c05b28e0879468d6.js'></script>
+                    </body>">
+                </iframe>
+              </div>
+
+              <video style="width: 70%; margin-left:10%; border-radius: 5px; filter: drop-shadow(0 0 2px black);"  controls>
+                <source src="/dev/videos/UserModeDbException.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_apex_dml_exception_usermode.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
