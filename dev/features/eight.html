@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+        <script src="/dev/js/dev.js"></script>
     </head>
     <body>
         <article class="featureSection">
@@ -21,6 +22,15 @@
             </div>
             <br/>
             <div name="featureBody" class="featureBody">
+              <div class="audioSection" style="padding:5px; float:right;">
+                <audio id="feature8Audio" style="filter: drop-shadow(0 0 2px black);" controlsList="nodownload" onended="pauseAnimation('myImage8', 'myImageStandBy8', 'feature8Audio')">
+                  <source src="/dev/audios/feature8.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                <img src="" id="myImage8" width="150" height="80" onclick="pauseAnimation('myImage8', 'myImageStandBy8', 'feature8Audio')" style="display:none; border-radius: 5px;">
+                <img src="/dev/images/audioStandby.png" id="myImageStandBy8" width="150" height="80" onclick="playAnimation('myImage8', 'myImageStandBy8', 'feature8Audio')" style="border-radius: 5px;">
+              </div>
+
               <p>From Summer '23, now you can extend stylesheets from a superclass component to a subclass component.
                 Previously, CSS custom properties and CSS ::part() were the only standard mechanisms for customizing components and you could not directly reference stylesheets from an extended base class.
               </p>

@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+        <script src="/dev/js/dev.js"></script>
     </head>
     <body>
         <article class="featureSection">
@@ -21,6 +22,15 @@
             </div>
             <br/>
             <div name="featureBody" class="featureBody">
+              <div class="audioSection" style="padding:5px; float:right;">
+                <audio id="feature10Audio" style="filter: drop-shadow(0 0 2px black);" controlsList="nodownload" onended="pauseAnimation('myImage10', 'myImageStandBy10', 'feature10Audio')">
+                  <source src="/dev/audios/feature10.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                <img src="" id="myImage10" width="150" height="80" onclick="pauseAnimation('myImage10', 'myImageStandBy10', 'feature10Audio')" style="display:none; border-radius: 5px;">
+                <img src="/dev/images/audioStandby.png" id="myImageStandBy10" width="150" height="80" onclick="playAnimation('myImage10', 'myImageStandBy10', 'feature10Audio')" style="border-radius: 5px;">
+              </div>
+
               <p>Whenever you publish a platform event, the publish operation is queued in Salesforce because this is an asynchronous process.
                 When no intermediate errors are returned, you get the queueing result in <b>Database.SaveResult</b> of an <b>Event.publish call.</b>
                 When the resources ara available, the system then carries out the queued publish call.

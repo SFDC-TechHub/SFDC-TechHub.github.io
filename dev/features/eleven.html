@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+        <script src="/dev/js/dev.js"></script>
     </head>
     <body>
         <article class="featureSection">
@@ -21,6 +22,15 @@
             </div>
             <br/>
             <div name="featureBody" class="featureBody">
+              <div class="audioSection" style="padding:5px; float:right;">
+                <audio id="feature11Audio" style="filter: drop-shadow(0 0 2px black);" controlsList="nodownload" onended="pauseAnimation('myImage11', 'myImageStandBy11', 'feature11Audio')">
+                  <source src="/dev/audios/feature11.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                <img src="" id="myImage11" width="150" height="80" onclick="pauseAnimation('myImage11', 'myImageStandBy11', 'feature11Audio')" style="display:none; border-radius: 5px;">
+                <img src="/dev/images/audioStandby.png" id="myImageStandBy11" width="150" height="80" onclick="playAnimation('myImage11', 'myImageStandBy11', 'feature11Audio')" style="border-radius: 5px;">
+              </div>
+
               <p>You can enable enhanced usage metrics to get more fields and time segments to query <b>PlatformEventUsageMetric</b>.
                 You can break down usage metrics by event name, client ID, event type, and usage type.<br/>
                 And you can get usage data by granular time segments, including daily, hourly, and 15-minute periods.

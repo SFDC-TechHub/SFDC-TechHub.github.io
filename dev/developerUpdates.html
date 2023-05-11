@@ -12,6 +12,7 @@
       function goBackToFeatureList(featureSectionId){
         document.getElementById("featureNav").style.display = "block";
         document.getElementById(featureSectionId).style.display = "none";
+        let audios = document.querySelectorAll("audio").forEach(el => el.pause());
       }
 
       function goBackToMain(featureSectionId){
