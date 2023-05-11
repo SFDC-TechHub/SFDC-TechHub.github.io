@@ -60,6 +60,10 @@
     filter: drop-shadow(0 0 1pc black);
 }
 
+.audioSection:hover {
+    cursor: pointer;
+}
+
 /*.featureNav {
     padding: 5px; 
     background-color: #E7ECFF;

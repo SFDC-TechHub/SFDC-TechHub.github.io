@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/dev/css/developerUpdates.css">
+        <script src="/dev/js/dev.js"></script>
     </head>
     <body>
         <article class="featureSection">
@@ -21,6 +22,15 @@
             </div>
             <br/>
             <div name="featureBody" class="featureBody">
+              <div class="audioSection" style="padding:5px; float:right;">
+                <audio id="feature14Audio" style="filter: drop-shadow(0 0 2px black);" controlsList="nodownload" onended="pauseAnimation('myImage14', 'myImageStandBy14', 'feature14Audio')">
+                  <source src="/dev/audios/feature14.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                <img src="" id="myImage14" width="150" height="80" onclick="pauseAnimation('myImage14', 'myImageStandBy14', 'feature14Audio')" style="display:none; border-radius: 5px;">
+                <img src="/dev/images/audioStandby.png" id="myImageStandBy14" width="150" height="80" onclick="playAnimation('myImage14', 'myImageStandBy14', 'feature14Audio')" style="border-radius: 5px;">
+              </div>
+
               <p>From Summer '23, you can use the <b>System.Label.get(namespace, label, language)</b> method to get a custom label, optionally specifying a language.
               </p>
 
