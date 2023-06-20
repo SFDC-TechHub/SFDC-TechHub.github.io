@@ -1,9 +1,9 @@
 # Add 'label1' to any changes within 'example' folder or any subfolders
-label1:
-- example/**/*
+Developer Updates:
+- dev/**/*
 
 # Add 'label2' to any file changes within 'example2' folder
-label2: example2/*
+Admin Updates: admin/*
 
 # Add label3 to any change to .txt files within the entire repository. Quotation marks are required for the leading asterisk
 label3:
@@ -14,13 +14,16 @@ repo:
 - '*'
 
 # Add '@domain/core' label to any change within the 'core' package
-'@domain/core':
-- package/core/*
+'Dev Features':
+- dev/features/*
 - package/core/**/*
 
 # Add 'test' label to any change to *.spec.js files within the source dir
-test:
-- src/**/*.spec.js
+Dev Archives:
+- dev/archives/*
+
+Dev Frontend:
+- dev/developerUpdates.html
 
 # Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
 source:
