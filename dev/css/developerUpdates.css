@@ -126,7 +126,8 @@
         display:flex; 
         flex-direction:row; 
         flex-wrap: wrap; 
-        margin: 0 0 0 65px;
+        margin: 0 0 0 0;
+        justify-content: center;
     }
 
     .featureNav {
@@ -179,7 +180,8 @@
         display:flex; 
         flex-direction:row; 
         flex-wrap: wrap; 
-        margin: 0 0 0 65px;
+        margin: 0 0 0 0;
+        justify-content: center;
     }
 
     .featureNav {
@@ -232,7 +234,8 @@
         display:flex; 
         flex-direction:row; 
         flex-wrap: wrap; 
-        margin: 0 0 0 65px;
+        margin: 0 0 0 0;
+        justify-content: center;
     }
 
     .featureNav {
@@ -285,7 +288,8 @@
         display:flex; 
         flex-direction:row; 
         flex-wrap: wrap; 
-        margin: 0 0 0 65px;
+        margin: 0 0 0 0;
+        justify-content: center;
     }
 
     .featureNav {
@@ -339,6 +343,7 @@
         flex-direction:row; 
         flex-wrap: wrap; 
         margin: 0 0 0 0;
+        justify-content: center;
     }
 
     .featureNav {
@@ -359,6 +364,7 @@
         color: #5b6db3;
         margin: 10px 10px 0 10px; 
         font-family: math;
+        font-size: medium;
     }
     
     .featureNav .featureNavTextDiv {
