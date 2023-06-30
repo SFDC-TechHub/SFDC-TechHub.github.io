@@ -15,14 +15,23 @@
          }
 
         function goBack(){
-            document.getElementById("indexDev").style.display = "block";
+            document.getElementById("indexDev").style.display = "flex";
             document.getElementById("notificationDiv").style.display = "block";
             document.getElementById("dev").style.display = "none";
+            document.getElementById("admin").style.display = "none";
             document.getElementById("includeDevHtml").style.display = "none";
         }
          
         function loadDevArchives(){
             $("#includeDevHtml").load("/dev/developerUpdates.html");
+        }
+
+        function loadSfdcAdminPage(){
+            document.getElementById("indexDev").style.display = "none";
+            document.getElementById("notificationDiv").style.display = "none";
+            document.getElementById("admin").style.display = "block";
+            $("#includeAdminHtml").load("/admin/adminUpdates.html");
+            document.getElementById("includeAdminHtml").style.display = "block";
         }
       </script>
    </head>
@@ -52,15 +61,33 @@
                         <span>Details &gt;&gt;</span>
                      </p>
                   </div>
-            </div>
-            </article>         
+               </div>
+            </article> 
+            
+            <!--SFDC Admin release Updates Nav -->
+            <article class="devNav" id="adminNav" onclick="loadSfdcAdminPage();">
+               <h3 class="navTitle">Admin Updates</h3><br/>
+               <div class ="navTextDiv">
+                  <div>
+                     <img src="/images/admin.png" style="width: 8rem;"/><br/>
+                     <span style="margin:5; font-size: xx-small;"><a href="https://www.freepik.com/free-photo/fun-3d-cartoon-asian-teenager_14197412.htm#&position=22&from_view=author" target="_balnk">Image by julos</a> on Freepik</span>
+                  </div>
+                  <div>
+                     <p class="navPara">
+                        Includes Summer ’23 features for Salesforce Admins.
+                     </p>
+                     <p  class="navbutton">
+                        <span>Details &gt;&gt;</span>
+                     </p>
+                  </div>
+               </div>
+            </article>
          </div>
 
          <div id="notificationDiv" class="notificationContainer">
             <div class="notificationText">
-               New features added : 
-               1. <span style="color:darkgreen;">Apex: Manage DML Exceptions in User-Mode Database Operations </span>
-               2. <span style="color:darkgreen;">Apex: Access Labels in Apex Dynamically</span>
+               New features documented : 
+               1. <span style="color:darkgreen;">Admin: Clone Lightning apps </span>
             </div>
          </div>
 
@@ -74,6 +101,18 @@
                <span class="archiveSec" onclick="loadDevArchives();"><a href="/dev/archives/archive.html">Archives</a></span>
             </div><br/>
             <div id="includeDevHtml" class="sfdcDevDiv" style="display:none;"></div>
+         </article>
+
+         <!--SFDC Admin release Updates Section-->
+         <article class="dev" id="admin">
+            <!--<img src="/images/back.png" style="width: 20px; margin: -15 5 5 5;" onclick="goBack();" alt="Go Back" title="Go Back">-->
+            <br/>
+            <h3 class="releaseTitle">Admin Release Updates</h3>
+            <div style="padding: 15px 10px 10px 10px;">
+               <span class="releaseSec">Release : <span class="releaseName">Summer ’23</span></span>
+               <span class="archiveSec" onclick="loadDevArchives();"><a href="/admin/archives/archive.html">Archives</a></span>
+            </div><br/>
+            <div id="includeAdminHtml" class="sfdcDevDiv" style="display:none;"></div>
          </article>
       </div>
    </body>
