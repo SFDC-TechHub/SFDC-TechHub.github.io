@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/admin/css/adminUpdates.css">
+        <script src="/admin/js/admin.js"></script>
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">1</span>
+                <div style="text-align:left;"><span class="label">Clone Lightning apps</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <div class="audioSection" style="padding:5px; float:right;">
+                <audio id="feature1Audio" style="filter: drop-shadow(0 0 2px black);" controlsList="nodownload" onended="pauseAnimation('myImag1e', 'myImageStandBy1', 'feature1Audio')">
+                  <source src="/admin/audios/feature1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                <img src="" id="myImage1" width="150" height="80" onclick="pauseAnimation('myImage1', 'myImageStandBy1', 'feature1Audio')" style="display:none; border-radius: 5px;">
+                <img src="/admin/images/audioStandby.png" id="myImageStandBy1" width="150" height="80" onclick="playAnimation('myImage1', 'myImageStandBy1', 'feature1Audio')" style="border-radius: 5px;">
+              </div>
+
+              <p>Admins can anytime go and clone any custom lightning apps to create and copy configurations from an existing app.
+              </p>
+                
+              <p>This feature is not available for standard, connected, managed, community, or classic apps.
+              </p>
+
+              <p>
+                <b>How to clone ?</b><br/>
+                Setup &rarr; App Manager &rarr; Clone (from dropdown of Custom Lightning app) &rarr; Quick Save
+                <br/><br/>
+                <video style="width: 70%; margin-left:10%; border-radius: 5px; filter: drop-shadow(0 0 2px black);"  controls>
+                    <source src="/admin/videos/cloneApps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+              </p>
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?language=en_US&id=release-notes.salesforce_release_notes.htm&type=5&release=244" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
