@@ -35,9 +35,22 @@
         <div class="featureNavAdmin">
           <!-- First Feature Navigation section-->
           <article class="featureNav1" onclick="loadFeature('featureAdminSection1', 'one');">
-            <h3 class="featureNavTitle">Clone Lightning apps</h3><br/>
+            <h3 class="featureNavTitle"><u>Admin:</u> Clone Lightning apps</h3><br/>
             <div class ="featureNavTextDiv">
               <img src="/images/feature1.png" style="width: 70%; margin-left:10%;"/>
+              <div>
+                <p>
+                  <span>Learn &gt;&gt;</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Second Feature Navigation section-->
+          <article class="featureNav1" onclick="loadFeature('featureAdminSection2', 'two');">
+            <h3 class="featureNavTitle"><u>Service:</u> Run the Lightning Knowledge Migration Tool</h3><br/>
+            <div class ="featureNavTextDiv">
+              <img src="/images/feature2.png" style="width: 70%; margin-left:10%;"/>
               <div>
                 <p>
                   <span>Learn &gt;&gt;</span>
@@ -56,6 +69,13 @@
         <div id="includeAdminone" style="display:none;"></div>  
       </div><br/>
       <!-- First Update Ends Here-->
+
+      <!-- Second Update Starts Here-->
+      <div id="featureAdminSection2" style="display:none;">
+        <img src="/images/back.png" style="width: 20px; margin: -50 5 5 -15; float:left;" onclick="goBackToFeatureList('featureAdminSection2');" alt="Go Back" title="Go Back">
+        <div id="includeAdmintwo" style="display:none;"></div>  
+      </div><br/>
+      <!-- Second Update Ends Here-->
 
     </article>
   </body>
