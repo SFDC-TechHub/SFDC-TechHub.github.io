@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/admin/css/adminUpdates.css">
+        <script src="/admin/js/admin.js"></script>
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">3</span>
+                <div style="text-align:left;"><span class="label">Admin: Limit the Number of Inactive Picklist Values</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <div class="audioSection" style="padding:5px; float:right;">
+                <audio id="feature3Audio" style="filter: drop-shadow(0 0 2px black);" controlsList="nodownload" onended="pauseAnimation('myImag1e', 'myImageStandBy1', 'feature3Audio')">
+                  <source src="/admin/audios/feature3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                <img src="" id="myImage1" width="150" height="80" onclick="pauseAnimation('myImage1', 'myImageStandBy1', 'feature3Audio')" style="display:none; border-radius: 5px;">
+                <img src="/admin/images/audioStandby.png" id="myImageStandBy1" width="150" height="80" onclick="playAnimation('myImage1', 'myImageStandBy1', 'feature3Audio')" style="border-radius: 5px;">
+              </div>
+
+              <p>With the Summer '23 release, Salesforce is enforcing the limit of inactive picklist values to 4,000 for new unrestricted custom picklists to improve org health and performance.
+                This change applies to Lightning Experience and Salesforce Classic in all editions.
+              </p>
+                
+              <p>
+                Any unrestricted custom picklists that were previously created that have more than 4,000 inactive values remain unchanged.
+              </p>
+
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_fields_limit_inactive_picklist_values.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
