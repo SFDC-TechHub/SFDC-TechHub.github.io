@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/admin/css/adminUpdates.css">
+        <script src="/admin/js/admin.js"></script>
+    </head>
+    <body>
+        <article class="featureSection">
+            <div name="featureTitle" class="featureTitle">
+              <div style="display: inline-flex; padding-bottom: 5px;">
+                <span class="index">2</span>
+                <div style="text-align:left;"><span class="label">Service: Run the Lightning Knowledge Migration Tool</span></div>
+              </div>
+              <div class="identityDiv">
+                <span class="identityText">Contributed by : </span>
+                <span class="identityVal">
+                  Subhojeet Ghosh 
+                  <a href="https://in.linkedin.com/in/subhojeet-ghosh-salesforce-professional" target="_blank">
+                    <img src="/images/LN.png" class="IdImg">
+                  </a>
+                </span>
+              </div>
+            </div>
+            <br/>
+            <div name="featureBody" class="featureBody">
+              <div class="audioSection" style="padding:5px; float:right;">
+                <audio id="feature2Audio" style="filter: drop-shadow(0 0 2px black);" controlsList="nodownload" onended="pauseAnimation('myImag1e', 'myImageStandBy1', 'feature2Audio')">
+                  <source src="/admin/audios/feature2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+                <img src="" id="myImage1" width="150" height="80" onclick="pauseAnimation('myImage1', 'myImageStandBy1', 'feature2Audio')" style="display:none; border-radius: 5px;">
+                <img src="/admin/images/audioStandby.png" id="myImageStandBy1" width="150" height="80" onclick="playAnimation('myImage1', 'myImageStandBy1', 'feature2Audio')" style="border-radius: 5px;">
+              </div>
+
+              <p>The Classic Knowledge data model retirement phase is in progress. Salesforce will enforce this update on June 1, 2025. To prepare for this retirement and take advantage of updated features, the Lightning Knowledge Migration Tool can be run.
+              </p>
+                
+              <p>
+                <b>Benefits:</b><br/>
+                <ul>
+                    <li>Get the latest Knowledge features when you migrate from Knowledge Classic to Lightning Knowledge, like Einstein Article Recommendations, Einstein Search for Knowledge, Flow support, and bots.</li>
+                    <li>After running the Lightning Knowledge Migration Tool, you can still use Classic Knowledge in the Classic UI.</li>
+                </ul>
+              </p>
+
+              <p>
+                <b>After the migration tool is run, Lightning Knowledge works the following ways in Salesforce Classic:</b><br/>
+                <ul>
+                    <li>Because Lightning Knowledge uses <pre style="display: inline;">record types</pre> instead of <pre style="display: inline;">article types</pre>, you can no longer filter by article type.</li>
+                    <li>You cannot set a default record type in Salesforce Classic.</li>
+                    <li>Some actions, such as <pre style="display: inline;">Change Record Type</pre>, are not available from the knowledge article record page in Salesforce Classic.</li>
+                    <li>Picklist values assigned to one record type in Knowledge are not visible on records in Salesforce Classic.</li>
+                    <li>Refactoring your custom solutions on your Classic Knowledge implementation might be needed.</li>
+                </ul>
+              </p>
+              <br/><br/>
+              <p>
+                <b style="color:brown; font-family: none;">References:</b> <br/>
+                <ol>
+                  <li><a style="text-decoration: none;" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_knowledge_classic_migration_release_update.htm&release=244&type=5" target="blank">Salesforce Release Notes</a></li>
+                </ol>
+              </p>
+            </div>
+            
+        </article>
+    </body>
+</html>
