@@ -1,3 +1,24 @@
+# Add '@domain/core' label to any change within the 'core' package
+Dev Features:
+- dev/features/*
+
+# Add 'test' label to any change to *.spec.js files within the source dir
+Dev Archives:
+- dev/archives/*
+
+Dev Frontend:
+- dev/developerUpdates.html
+
+Admin Features:
+- admin/features/*
+
+# Add 'test' label to any change to *.spec.js files within the source dir
+Admin Archives:
+- admin/archives/*
+
+admin Frontend:
+- admin/adminUpdates.html
+
 # Add 'label1' to any changes within 'example' folder or any subfolders
 Developer Updates:
 - dev/**/*
@@ -12,17 +33,6 @@ label3:
 # Add 'repo' label to any root file changes
 repo:
 - '*'
-
-# Add '@domain/core' label to any change within the 'core' package
-'Dev Features':
-- dev/features/*
-
-# Add 'test' label to any change to *.spec.js files within the source dir
-Dev Archives:
-- dev/archives/*
-
-Dev Frontend:
-- dev/developerUpdates.html
 
 # Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
 source:
