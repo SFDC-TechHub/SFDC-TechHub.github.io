@@ -5,9 +5,10 @@
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>
             $(function() {
-                //$("#includeArchiveDevHtml").load("/dev/developerUpdates.html");
-                //document.getElementById("devArchive").style.display = "block";
-                //document.getElementById("includeArchiveDevHtml").style.display = "block";
+                let releaseName = $('#selectBox').find(":selected").val();
+                $("#includeArchiveAdminHtml").load("/admin/archives/"+releaseName+"/archiveAdmin.html");
+                document.getElementById("devArchive").style.display = "block";
+                document.getElementById("includeArchiveAdminHtml").style.display = "block";
             });
             
         </script>
@@ -28,17 +29,17 @@
                     <span class="releaseSec">Release : 
                         <span class="releaseName">
                             <select id="selectBox">
-                                <option value="" selected="selected"></option>
+                                <option value="Summer23" selected="selected">Summer ’23</option>
                               </select>
                         </span>
                     </span>
                 </div><br/>
-                <!--<div id="includeArchiveDevHtml" class="sfdcDevDiv"></div>-->
-                <div style="font-size: larger; text-align: center; font-weight: 600; color: darkgray; padding-bottom: 5rem;">
+                <div id="includeArchiveAdminHtml" class="sfdcDevDiv"></div>
+                <!--<div style="font-size: larger; text-align: center; font-weight: 600; color: darkgray; padding-bottom: 5rem;">
                     <a href="/"><img src="/images/back.png" style="width: 20px; margin: -50 5 5 5; float:left;" alt="Go Back" title="Go Back"></a>
                     <span style="font-size: 10rem;">&#128542;</span><br/><br/>
                     ** No Archives are there at the moment. **
-                </div>
+                </div>-->
             </article>
         </div>
     </body>

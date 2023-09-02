@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/admin/css/adminUpdates.css">
+    <script>
+      function loadFeature(featureSectionId, pageName){
+        console.log('loading')
+        document.getElementById("featureNav1").style.display = "none";
+        document.getElementById(featureSectionId).style.display = "block";
+        $("#includeAdmin"+pageName).load("/admin/features/"+pageName+".html");
+        document.getElementById("includeAdmin"+pageName).style.display = "block";
+     }
+
+      function goBackToFeatureList(featureSectionId){
+        document.getElementById("featureNav1").style.display = "block";
+        document.getElementById(featureSectionId).style.display = "none";
+        let audios = document.querySelectorAll("audio").forEach(el => el.pause());
+      }
+
+      function goBackToMain(featureSectionId){
+        document.getElementById(featureSectionId).style.display = "none";
+        document.getElementById("featureNav1").style.display = "block";
+        //parent.goBack();
+        location.reload(true);
+      }
+
+    </script>
+  </head>
+  <body>
+    <article style="padding:20px; margin-top: -20px;">
+
+      <!-- Feature Navigation Section Starts Here-->
+      <div id="featureNav1">
+        <img src="/images/back.png" style="width: 20px; margin: -50 5 5 -15; float:left;" onclick="goBackToMain('featureAdminSection1');" alt="Go Back" title="Go Back">
+        
+        <div class="featureNavAdmin">
+          <!-- First Feature Navigation section-->
+          <article class="featureNav1" onclick="loadFeature('featureAdminSection1', 'one');">
+            <h3 class="featureNavTitle"><u>Admin:</u> Clone Lightning apps</h3><br/>
+            <div class ="featureNavTextDiv">
+              <img src="/images/feature1.png" style="width: 70%; margin-left:10%;"/>
+              <div>
+                <p>
+                  <span>Learn &gt;&gt;</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Second Feature Navigation section-->
+          <article class="featureNav1" onclick="loadFeature('featureAdminSection2', 'two');">
+            <h3 class="featureNavTitle"><u>Service:</u> Run the Lightning Knowledge Migration Tool</h3><br/>
+            <div class ="featureNavTextDiv">
+              <img src="/images/feature2.png" style="width: 70%; margin-left:10%;"/>
+              <div>
+                <p>
+                  <span>Learn &gt;&gt;</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Third Feature Navigation section-->
+          <article class="featureNav1" onclick="loadFeature('featureAdminSection3', 'three');">
+            <h3 class="featureNavTitle"><u>Admin:</u> Limit the Number of Inactive Picklist Values</h3><br/>
+            <div class ="featureNavTextDiv">
+              <img src="/images/feature3.png" style="width: 70%; margin-left:10%;"/>
+              <div>
+                <p>
+                  <span>Learn &gt;&gt;</span>
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <!-- Feature Navigation Section Ends Here-->
+
+      <!-- First Update Starts Here-->
+      <div id="featureAdminSection1" style="display:none;">
+        <img src="/images/back.png" style="width: 20px; margin: -50 5 5 -15; float:left;" onclick="goBackToFeatureList('featureAdminSection1');" alt="Go Back" title="Go Back">
+        <div id="includeAdminone" style="display:none;"></div>  
+      </div><br/>
+      <!-- First Update Ends Here-->
+
+      <!-- Second Update Starts Here-->
+      <div id="featureAdminSection2" style="display:none; margin-top: -15px;">
+        <img src="/images/back.png" style="width: 20px; margin: -53 5 5 -15; float:left;" onclick="goBackToFeatureList('featureAdminSection2');" alt="Go Back" title="Go Back">
+        <div id="includeAdmintwo" style="display:none;"></div>  
+      </div><br/>
+      <!-- Second Update Ends Here-->
+
+      <!-- Third Update Starts Here-->
+      <div id="featureAdminSection3" style="display:none; margin-top: -25px;">
+        <img src="/images/back.png" style="width: 20px; margin: -61 5 5 -15; float:left;" onclick="goBackToFeatureList('featureAdminSection3');" alt="Go Back" title="Go Back">
+        <div id="includeAdminthree" style="display:none;"></div>  
+      </div><br/>
+      <!-- Third Update Ends Here-->
+
+    </article>
+  </body>
+</html>
